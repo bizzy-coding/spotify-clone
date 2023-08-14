@@ -23,20 +23,20 @@ export default function Dashboard({ code }) {
     setLyrics("")
   }
 
-  useEffect(() => {
-    if (!playingTrack) return
+  // useEffect(() => {
+  //   if (!playingTrack) return
 
-    axios
-      .get("http://localhost:3002/lyrics", {
-        params: {
-          track: playingTrack.title,
-          artist: playingTrack.artist,
-        },
-      })
-      .then(res => {
-        setLyrics(res.data.lyrics)
-      })
-  }, [playingTrack])
+  //   axios
+  //     .get("http://localhost:3002/lyrics", {
+  //       params: {
+  //         track: playingTrack.title,
+  //         artist: playingTrack.artist,
+  //       },
+  //     })
+  //     .then(res => {
+  //       setLyrics(res.data.lyrics)
+  //     })
+  // }, [playingTrack])
 
   useEffect(() => {
     if (!accessToken) return
