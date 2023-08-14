@@ -7,7 +7,7 @@ import SpotifyWebApi from "spotify-web-api-node"
 import axios from "axios"
 
 const spotifyApi = new SpotifyWebApi({
-  clientId: "8b945ef10ea24755b83ac50cede405a0",
+  clientId: "a4a5b5feeb124c17a4cc999785390b44",
 })
 
 export default function Dashboard({ code }) {
@@ -27,7 +27,7 @@ export default function Dashboard({ code }) {
     if (!playingTrack) return
 
     axios
-      .get("http://localhost:3001/lyrics", {
+      .get("http://localhost:3002/lyrics", {
         params: {
           track: playingTrack.title,
           artist: playingTrack.artist,
